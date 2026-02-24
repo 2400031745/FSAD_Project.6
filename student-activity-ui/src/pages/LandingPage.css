@@ -1,0 +1,49 @@
+.landing-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top right, #E0E0FF, #F5F5F7);
+}
+
+.landing-content {
+    text-align: center;
+    max-width: 600px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, #1D1D1F 0%, #434344 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--macos-text-secondary);
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.large-btn {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

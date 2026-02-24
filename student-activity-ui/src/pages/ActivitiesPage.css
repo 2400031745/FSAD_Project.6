@@ -1,0 +1,112 @@
+.activities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.activities-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.activities-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.activities-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activities-table th {
+    text-align: left;
+    padding: 16px 24px;
+    background: rgba(0, 0, 0, 0.02);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--macos-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--macos-border);
+}
+
+.activities-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--macos-border);
+    font-size: 0.95rem;
+}
+
+.activities-table tr:last-child td {
+    border-bottom: none;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-secondary {
+    color: var(--macos-text-secondary);
+}
+
+.delete-btn {
+    background: none;
+    color: #FF3B30;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    width: 400px;
+    animation: modalScaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+@keyframes modalScaleUp {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.cancel-btn {
+    background: none;
+    color: var(--macos-text-secondary);
+    font-weight: 500;
+}

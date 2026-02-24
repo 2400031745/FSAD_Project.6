@@ -1,0 +1,78 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    padding: 24px;
+}
+
+.sidebar.open {
+    transform: translateX(280px);
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.sidebar-header h3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.close-btn {
+    background: none;
+    font-size: 1.5rem;
+    color: var(--macos-text-secondary);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar-nav a,
+.logout-btn {
+    text-decoration: none;
+    color: var(--macos-text);
+    padding: 12px 16px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.sidebar-nav a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.logout-btn {
+    margin-top: 20px;
+    background: #FFE5E5;
+    color: #FF3B30;
+}
+
+.logout-btn:hover {
+    background: #FFD2D2;
+}
